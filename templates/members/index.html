@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="member-container"></div>
+<h1> All Members </h1>
+<hr>
+
+{% for member in members %}
+<div class="member">
+<p><a href="/members/{{ member.id }}"> {{ member.name }} {{ member.premium }} </a></p>
+</div>
+{% endfor %}
+
+
+{% endblock %} 
+
+{# <table>
+  <tr>
+    <th>Name</th>
+  
+  </tr>
+  {% for member in members %}
+  <tr>
+    <td><a href="/members/{{ member.id }}"> {{member.name}} </a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %} #}

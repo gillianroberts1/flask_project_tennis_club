@@ -1,15 +1,11 @@
-import pdb
 from db.run_sql import run_sql
 from models.member import Member
+from models.court import Court
 
 
-def delete_all():
-    sql = "DELETE FROM members"
-    run_sql(sql)
 
 
 def save(member):
-    
     sql = "INSERT INTO members (name, premium) VALUES (%s, %s) RETURNING *"
     values = [member.name, member.premium]
     results = run_sql(sql, values)
@@ -25,7 +21,7 @@ def select_all():
     for row in results:
         member = Member(row['name'], row['premium'], row['id'])
         members.append(member)
-    return member
+    return members
     
 
 
@@ -41,5 +37,8 @@ def select(id):
 
 
 
+def delete_all():
+    sql = "DELETE FROM members"
+    run_sql(sql)
 
 
