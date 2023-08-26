@@ -2,6 +2,19 @@
 
 {% block content %}
 
-<p> single member shown here</p>
+
+<div><
+<p>ID:{{member.id}}</p>
+
+<h3> Member Name: {{member.name}}</h3>
+
+<p>Address: </p>
+<p>Contact Tel No: </p>
+<p>Email Address: </p>
+<hr>
+<p>Wins: </p>
+<p>Loses: </p>
+
+<p><a href="members/{{member.id}}/edit">Edit</a></p>
 
 {% endblock %}
