@@ -11,13 +11,13 @@ import repositories.court_repository as court_repository
 member_repository.delete_all()
 court_repository.delete_all()
 
-member1 = Member("Gillian Roberts", True)
+member1 = Member("Gillian Roberts", "34 Kilnside Road, Glasgow", "G45 8JN", "07883552756", "gilrob@outlook.com", "14/8/78", True, 1, 0)
 member_repository.save(member1)
 
-member2 = Member("Louise Reid", False)
+member2 = Member("Louise Reid", "45 The Best Street, Glasgow", "G34 1LK", "07886443554", "loureid@gg.com", "10/10/81", False, 1, 4)
 member_repository.save(member2)
 
-member3 = Member("Carmen Roberts", True)
+member3 = Member("Carmen Roberts", "34 Kilnside Road, Glasgow", "G45 8JN", "07883552226", "carmrob@outlook.com", "10/9/17", True, 3, 1)
 member_repository.save(member3)
 
 

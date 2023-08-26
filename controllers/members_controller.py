@@ -23,6 +23,10 @@ def show_member(id):
 
 
 # route to add new member GET
+@members_blueprint.route("/members/new")
+def new_user():
+    return render_template('members/new.html')
+
 
 
 

@@ -3,28 +3,22 @@
 {% block content %}
 
 
-<div class="member-container"></div>
+<a href="/members/new">New Member</a>
 <h1> All Members </h1>
-<hr>
 
-{% for member in members %}
+{% for member in members %} 
+
 <div class="member">
-<p><a href="/members/{{ member.id }}"> {{ member.name }} {{ member.premium }} </a></p>
-</div>
+<div class="member-container">
+
+<hr>
+    <p><a href="/members/{{ member.id }}"> {{ member.name }}</a></p>
+    <p> {{member.address}} {{ member.postcode }} </p>
+    <p> {{member.tel_no}} {{member.email}} {{member.dob}}</p>
+    <p> {{member.premium}} {{ member.win }} {{ member.loss}}</p>
+
 {% endfor %}
+</div>
+</div>
 
-
-{% endblock %} 
-
-{# <table>
-  <tr>
-    <th>Name</th>
-  
-  </tr>
-  {% for member in members %}
-  <tr>
-    <td><a href="/members/{{ member.id }}"> {{member.name}} </a></td>
-  </tr>
-  {% endfor %}
-</table>
-{% endblock %} #}
+{% endblock %}

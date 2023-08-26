@@ -6,8 +6,8 @@ from models.court import Court
 
 
 def save(member):
-    sql = "INSERT INTO members (name, premium) VALUES (%s, %s) RETURNING *"
-    values = [member.name, member.premium]
+    sql = "INSERT INTO members (name, address, postcode, tel_no, email, dob, premium, win, loss) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s) RETURNING id"
+    values = [member.name, member.address, member.postcode, member.tel_no, member.email, member.dob, member.premium, member.win, member.loss]
     results = run_sql(sql, values)
     member.id = results[0]['id']
     return member
@@ -19,7 +19,7 @@ def select_all():
     sql = "SELECT * FROM members"
     results = run_sql(sql)
     for row in results:
-        member = Member(row['name'], row['premium'], row['id'])
+        member = Member(row['name'], row['address'], row['postcode'], row['tel_no'], row['email'], row['dob'], row['premium'], row['win'], row['loss'], row['id'])
         members.append(member)
     return members
     
@@ -32,7 +32,7 @@ def select(id):
     results = run_sql(sql, values)
     if results:
         result = results[0]
-        member = Member(result['name'], result['premium'], result['id'])
+        member = Member(result['name'], result['address'], result['postcode'], result['tel_no'], result['email'], result['dob'], result['premium'], result['win'], result['loss'], result['id'])
     return member
 
 

@@ -4,7 +4,14 @@ DROP TABLE courts;
 CREATE TABLE members (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    premium BOOLEAN
+    address VARCHAR(255),
+    postcode VARCHAR(255),
+    tel_no VARCHAR(255),
+    email VARCHAR(255),
+    dob VARCHAR(255),
+    premium BOOLEAN,
+    win INT,
+    loss INT
 );
 
 CREATE TABLE courts (
