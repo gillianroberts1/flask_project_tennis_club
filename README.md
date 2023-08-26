@@ -19,6 +19,7 @@ I have been asked by a new local tennis club to design a booking system to keep 
 * add ability to rent out equipment such as racquets and balls 
 * add profile photo of each member
 * allow court to be booked for one hour or two hours
+* be able to record the winner of each match
 
 #### Set Up
 1. Brief
