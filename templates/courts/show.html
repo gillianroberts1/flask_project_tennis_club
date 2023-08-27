@@ -2,6 +2,13 @@
 
 {% block content %}
 
-<h1> show single court</h1>
+<div class="court_container">
+<p>ID: {{court.id }}</p>
+<p> Court No: {{ court.court_no }} Court Surface: {{ court.surface }}</p>
+</div>
+
+<p><a href="/courts/{{court.id}}/edit">Edit</a></p>
+
+
 
 {% endblock %}

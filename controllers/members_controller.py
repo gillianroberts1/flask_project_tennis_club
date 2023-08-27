@@ -60,7 +60,6 @@ def update_member(id):
     dob = request.form['dob']
     premium = request.form['premium']
     member = Member(name, address, postcode, tel_no, email, dob, premium, None, None, id)
-    print(member)
     member_repository.update(member)
     return redirect('/members')
 

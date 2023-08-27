@@ -2,6 +2,21 @@
 
 {% block content %}
 
-<h1> all courts will be displayed here</h1>
 
+<a href="/courts/new">New Court</a>
+<h1> All Courts </h1>
+
+{% for court in courts %} 
+
+<div class="court">
+<div class="court-container">
+
+
+
+<hr>
+
+<p><a href="/courts/{{ court.id }}"> {{ court.court_no }} </a></p>
+<p>Court Surface: {{ court.surface }} </p>
+{% endfor %}
+</div>
 {% endblock %}

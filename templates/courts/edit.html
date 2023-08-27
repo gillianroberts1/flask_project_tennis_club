@@ -1,21 +1,22 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
+
 <head>
-    <h3> Add New Court</h3>
+    <h3>Edit Court</h3>
 </head>
 
-<form class="form_layout" action="/courts" method="post">
+<p>Court No: {{court.court_no }} Court Surface: {{court.surface }}</p>
+<form class="form_layout" action="/courts/{{ court.id }}" method="post">
 
     <div class="form_element">
         <label for="court_no">Court No:</label>
-        <input type="text" name="court_no" placeholder="Court No" />
+        <input type="text" name="court_no" value="{{court.court_no}}" />
     </div>
 
     <div class="form_element">
         <label for="surface">Court Surface:</label>
-        <select id="surface" name="surface">
+        <select id="surface" name="surface" value="{{court.surface}}">
             <option value="Grass">Grass</option>
             <option value="Clay">Clay</option>
             <option value="Hard">Hard</option>
@@ -23,7 +24,7 @@
             </select>
     </div>
 
-    <button type="submit">Add Court</button>
-
+    <button type="submit">Update Court</button>
 </form>
+
 {% endblock %}

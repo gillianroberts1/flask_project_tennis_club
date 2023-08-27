@@ -21,7 +21,7 @@ member3 = Member("Carmen Roberts", "34 Kilnside Road, Glasgow", "G45 8JN", "0788
 member_repository.save(member3)
 
 
-court1 = Court(1, "Lawn")
+court1 = Court(1, "Grass")
 court_repository.save(court1)
 
 court2 = Court(2, "Clay")

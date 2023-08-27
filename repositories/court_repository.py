@@ -36,3 +36,12 @@ def select(id):
     if result is not None:
         court = Court(result['court_no'], result['surface'], result['id'])
     return court
+
+def update(court):
+    sql = "UPDATE courts SET (court_no, surface) = (%s, %s) WHERE id = %s"
+    values = [court.court_no, court.surface, court.id]
+    run_sql(sql, values)
+
+
+
+

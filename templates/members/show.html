@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<div><
+<div class="member-container">
 <p>ID:{{member.id}}</p>
 
 <h3> Member Name: {{member.name}}</h3>
@@ -15,7 +15,7 @@
 <p>Premium: {{member.premium}}</p>
 <p>Wins: {{member.wins}}</p>
 <p>Loses: {{member.loss}}</p>
-
+</div>
 <p><a href="/members/{{member.id}}/edit">Edit</a></p>
 
 {% endblock %}
