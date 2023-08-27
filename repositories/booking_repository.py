@@ -1,5 +1,6 @@
 from db.run_sql import run_sql
 from models.booking import Booking
+from models.court import Court
 import repositories.member_repository as member_repository
 import repositories.court_repository as court_repository
 
@@ -32,3 +33,6 @@ def delete(id):
     sql = "DELETE FROM bookings WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+
+

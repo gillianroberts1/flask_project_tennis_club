@@ -3,6 +3,7 @@ from flask import Blueprint
 from models.court import Court
 
 import repositories.court_repository as court_repository
+import repositories.member_repository as member_repository
 
 courts_blueprint = Blueprint("courts", __name__)
 
@@ -14,7 +15,8 @@ def courts_list():
 @courts_blueprint.route("/courts/<id>")
 def show_court(id):
     court = court_repository.select(id)
-    return render_template("courts/show.html", court=court)
+    members = member_repository.members_for_court(court)
+    return render_template("courts/show.html", court=court, members=members)
 
 @courts_blueprint.route("/courts/new")
 def new_court():
@@ -40,3 +42,4 @@ def update_court(id):
     court = Court(court_no, surface, id)
     court_repository.update(court)
     return redirect('/courts')
+

@@ -37,8 +37,8 @@ booking_repository.save(booking2)
 
 
 
-# courts = court_repository.court_for_member(member1)
+courts = court_repository.court_for_member(member1)
 
-# members = member_repository.member_for_court(court1)
+members = member_repository.members_for_court(court1)
 
 # pdb.set_trace()

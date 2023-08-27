@@ -9,7 +9,7 @@ CREATE TABLE members (
     address VARCHAR(255),
     postcode VARCHAR(255),
     tel_no VARCHAR(255),
-    email VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
     dob VARCHAR(255),
     premium BOOLEAN,
     win INT,
@@ -22,6 +22,9 @@ CREATE TABLE courts (
     surface VARCHAR(255)
 
 );
+
+
+
 
 CREATE TABLE bookings (
     id SERIAL PRIMARY KEY,

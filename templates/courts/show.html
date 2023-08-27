@@ -10,5 +10,8 @@
 <p><a href="/courts/{{court.id}}/edit">Edit</a></p>
 
 
+{% for member in members %}
+<p> Currently Booked By: {{ member.name }}</p>
+{% endfor %}
 
 {% endblock %}

@@ -3,6 +3,7 @@ from flask import Blueprint
 from models.member import Member
 
 import repositories.member_repository as member_repository
+import repositories.court_repository as court_repository
 
 members_blueprint = Blueprint("members", __name__)
 
@@ -19,7 +20,8 @@ def members_list():
 @members_blueprint.route("/members/<id>")
 def show_member(id):
     member = member_repository.select(id)
-    return render_template("members/show.html", member=member)
+    courts = court_repository.court_for_member(member)
+    return render_template("members/show.html", member=member, courts=courts)
 
 
 # route to add new member GET
