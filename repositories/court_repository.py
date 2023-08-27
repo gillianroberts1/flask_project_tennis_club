@@ -49,17 +49,17 @@ def delete_all():
     sql = "DELETE FROM courts"
     run_sql(sql)
 
-def court_for_member(member):
-    courts = []
-    sql = "SELECT courts.* FROM courts INNER JOIN bookings ON bookings.court_id = courts.id WHERE member_id = %s"
-    values = [member.id]
-    results = run_sql(sql, values)
+# def court_for_member(member):
+#     courts = []
+#     sql = "SELECT courts.* FROM courts INNER JOIN bookings ON bookings.court_id = courts.id WHERE member_id = %s"
+#     values = [member.id]
+#     results = run_sql(sql, values)
 
-    for row in results:
-        court = Court(row['court_no'], row['surface'], row['id'])
-        courts.append(court)
+#     for row in results:
+#         court = Court(row['court_no'], row['surface'], row['id'])
+#         courts.append(court)
 
-    return courts
+#     return courts
 
 
 

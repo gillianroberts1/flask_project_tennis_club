@@ -51,16 +51,16 @@ def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
 
-def members_for_court(court):
-    members = []
-    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE court_id = %s"
-    values = [court.id]
-    results = run_sql(sql, values)
+# def members_for_court(court):
+#     members = []
+#     sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE court_id = %s"
+#     values = [court.id]
+#     results = run_sql(sql, values)
 
-    for row in results:
-        member = Member(row['name'], row['address'], row['postcode'], row['tel_no'], row['email'], row['dob'], row['premium'], row['win'], row['loss'], row['id'])
-        members.append(member)
+#     for row in results:
+#         member = Member(row['name'], row['address'], row['postcode'], row['tel_no'], row['email'], row['dob'], row['premium'], row['win'], row['loss'], row['id'])
+#         members.append(member)
         
-    return members
+#     return members
 
 

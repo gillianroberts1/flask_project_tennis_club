@@ -1,15 +1,15 @@
 from db.run_sql import run_sql
 from models.booking import Booking
-from models.court import Court
+
 import repositories.member_repository as member_repository
 import repositories.court_repository as court_repository
 
-import pdb
+
 
 def save(booking):
-    sql = "INSERT INTO bookings (member_id, court_id) VALUES (%s, %s) RETURNING id"
-    values = [booking.member.id, booking.court.id]
-    results = run_sql(sql, values)
+    sql = "INSERT INTO bookings (member_id, slot_id) VALUES (%s, %s) RETURNING id"
+    values = [booking.member.id, booking.slot.id]
+    results = run_sql(sql, values)  
     booking.id = results[0]['id']
     return booking
 
@@ -20,8 +20,7 @@ def select_all():
 
     for row in results:
         member = member_repository.select(row['member_id'])
-        court = court_repository.select(row['court_id'])
-        booking = Booking(member, court, row['id'])
+        booking = Booking(member, row['slot'], row['id'])
         bookings.append(booking)
     return bookings
 

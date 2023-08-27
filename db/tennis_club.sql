@@ -1,7 +1,14 @@
-DROP TABLE bookings;
-DROP TABLE members;
-DROP TABLE courts;
+DROP TABLE IF EXISTS bookings;
+DROP TABLE IF EXISTS slots;
+DROP TABLE IF EXISTS members;
+DROP TABLE IF EXISTS courts;
 
+
+CREATE TABLE courts (
+    id SERIAL PRIMARY KEY,
+    court_no INT,
+    surface VARCHAR(255) 
+);
 
 CREATE TABLE members (
     id SERIAL PRIMARY KEY,
@@ -16,19 +23,22 @@ CREATE TABLE members (
     loss INT
 );
 
-CREATE TABLE courts (
+CREATE TABLE slots (
     id SERIAL PRIMARY KEY,
-    court_no INT,
-    surface VARCHAR(255)
-
+    court_id INT REFERENCES courts(id) ON DELETE CASCADE,
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP NOT NULL,
+    available BOOLEAN NOT NULL DEFAULT TRUE
 );
+
 
 
 
 
 CREATE TABLE bookings (
     id SERIAL PRIMARY KEY,
+    slot_id  INT REFERENCES slots(id) ON DELETE CASCADE,
     member_id INT REFERENCES members(id) ON DELETE CASCADE,
-    court_id INT REFERENCES courts(id) ON DELETE CASCADE
+    UNIQUE (slot_id, member_id)    
     
 );

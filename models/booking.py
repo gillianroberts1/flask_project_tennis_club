@@ -1,5 +1,5 @@
 class Booking:
-    def __init__(self, member, court, id=None):
+    def __init__(self, member, slot, id=None):
         self.member = member
-        self.court = court
+        self.slot = slot
         self.id = id
