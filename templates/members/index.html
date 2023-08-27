@@ -13,9 +13,9 @@
 
 <hr>
     <p><a href="/members/{{ member.id }}"> {{ member.name }}</a></p>
-    <p> {{member.address}} {{ member.postcode }} </p>
-    <p> {{member.tel_no}} {{member.email}} {{member.dob}}</p>
-    <p> {{member.premium}} {{ member.win }} {{ member.loss}}</p>
+    <p> Address: {{member.address}} Postcode: {{ member.postcode }} </p>
+    <p> Tel No: {{member.tel_no}} Email: {{member.email}} Date of Birth: {{member.dob}}</p>
+    <p> Premium Member: {{member.premium}} Win: {{ member.win }} Loss: {{ member.loss}}</p>
 
 {% endfor %}
 </div>

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<head>
+    <h3>Edit Existing Member</h3>
+</head>
+<form class="form_layout" action="/members/{{member.id}}" method="post">
+
+    <div class="form_element">
+        <label for="name">Full Name:</label>
+        <input type="text" name="name" value="{{member.name}}" />
+    </div>
+
+    <div class="form_element">
+        <label for="address">Address:</label>
+        <input type="text" name="address" value="{{member.address}}" />
+    </div>
+
+    <div class="form_element">
+        <label for="postcode">Postcode:</label>
+        <input type="text" name="postcode" value="{{member.postcode}}" />
+    </div>
+
+    <div class="form_element">
+        <label for="telno">Tel_no:</label>
+        <input type="text" name="tel_no" value="{{member.tel_no}}" />
+    </div>
+
+    <div class="form_element">
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="{{member.email}}" />
+    </div>
+
+    <div class="form_element">
+        <label for="dob">Date of Birth:</label>
+        <input type="text" name="dob" value="{{member.dob}}" />
+    </div>
+
+    <div class="form_element">
+        <label for="premium">Premium:</label>
+        <input type="checkbox" name="premium" value="{{member.premium}}" />
+    </div>
+
+    <button type="submit">Update Member</button>
+
+
+</form>
+
+
+{% endblock %}
