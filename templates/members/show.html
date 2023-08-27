@@ -11,12 +11,13 @@
 <p>Address: {{member.address}}</p>
 <p>Contact Tel No: {{member.tel_no}}</p>
 <p>Email Address: {{member.email}}</p>
+<p><a href="/members/{{member.id}}/edit">Edit</a></p>
+
 <hr>
 <p>Premium: {{member.premium}}</p>
 <p>Wins: {{member.wins}}</p>
 <p>Loses: {{member.loss}}</p>
 </div>
-<p><a href="/members/{{member.id}}/edit">Edit</a></p>
 
 {% for court in courts %}
 <p> Court Booked: {{ court.court_no }}</p>

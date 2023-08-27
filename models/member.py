@@ -1,6 +1,6 @@
 class Member:
 
-    def __init__(self, name, address, postcode, tel_no, email, dob, premium, win = None, loss = None, id = None):
+    def __init__(self, name, address, postcode, tel_no, email, dob, premium=None, win = None, loss = None, id = None):
         self.name = name
         self.address = address
         self.postcode = postcode
