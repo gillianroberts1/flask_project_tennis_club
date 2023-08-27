@@ -42,7 +42,7 @@ def update(member):
     run_sql(sql, values)
 
 def delete(member):
-    sql = "DELETE FROM member WHERE id = %s"
+    sql = "DELETE FROM members WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 

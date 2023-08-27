@@ -1,15 +1,17 @@
 import pdb
 from models.member import Member
 from models.court import Court
+from models.booking import Booking
 
 
 import repositories.member_repository as member_repository
 import repositories.court_repository as court_repository
-
+import repositories.booking_repository as booking_repository
 
 
 member_repository.delete_all()
 court_repository.delete_all()
+booking_repository.delete_all()
 
 member1 = Member("Gillian Roberts", "34 Kilnside Road, Glasgow", "G45 8JN", "07883552756", "gilrob@outlook.com", "14/8/78", True, 1, 0)
 member_repository.save(member1)
@@ -26,6 +28,13 @@ court_repository.save(court1)
 
 court2 = Court(2, "Clay")
 court_repository.save(court2)
+
+booking1 = Booking(member1, court1)
+booking_repository.save(booking1)
+
+booking2 = Booking(member2, court2)
+booking_repository.save(booking2)
+
 
 
 # courts = court_repository.court_for_member(member1)

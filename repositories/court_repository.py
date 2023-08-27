@@ -3,9 +3,6 @@ from db.run_sql import run_sql
 from models.court import Court
 from models.member import Member
 
-def delete_all():
-    sql = "DELETE FROM courts"
-    run_sql(sql)
 
 
 def save(court):
@@ -42,6 +39,15 @@ def update(court):
     values = [court.court_no, court.surface, court.id]
     run_sql(sql, values)
 
+
+def delete(id):
+    sql = "DELETE FROM courts WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def delete_all():
+    sql = "DELETE FROM courts"
+    run_sql(sql)
 
 
 

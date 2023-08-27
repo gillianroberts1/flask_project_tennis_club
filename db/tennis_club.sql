@@ -1,5 +1,7 @@
+DROP TABLE bookings;
 DROP TABLE members;
 DROP TABLE courts;
+
 
 CREATE TABLE members (
     id SERIAL PRIMARY KEY,
@@ -19,4 +21,11 @@ CREATE TABLE courts (
     court_no INT,
     surface VARCHAR(255)
 
+);
+
+CREATE TABLE bookings (
+    id SERIAL PRIMARY KEY,
+    member_id INT REFERENCES members(id) ON DELETE CASCADE,
+    court_id INT REFERENCES courts(id) ON DELETE CASCADE
+    
 );

@@ -11,6 +11,7 @@ I have been asked by a new local tennis club to design a booking system to keep 
 * it should allow the user to view all bookings, by member, by court and view all.
 
 #### Extensions
+ * create time slots for each court
  * Courts should have a maximum capacity (singles and doubles) and users can only be added whilst there are spaces remaining
  * the club could be able to give members premium or standard membership. Standard members can only be signed up for off peak courts. 
  * memberships should be able to be upgraded or downgraded.
