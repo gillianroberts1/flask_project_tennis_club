@@ -5,14 +5,13 @@
 <head>
 <h3>New Booking</h3>
 </head>
-<form action="/bookings" method="post">
-    <label for="member">Select Member:</label>
-    <select name="member_id[]" id="member" multiple>
-    {% for member in members %}
-        <option value="{{ member.id }}">{{member.name}}</option>
-        
-    {% endfor %} 
+<form action="/bookings/type" method="post">
+    <label for="type">Select Booking Type:</label>
+    <select name="type" id="type">
+        <option value="singles">Singles</option>
+        <option value="doubles">Doubles</option>
     </select>
+
 
     <label for="court">Select Court:</label>
     <select name="court_id" id="court_no">
@@ -22,24 +21,22 @@
         {% endfor %}
     </select>
 
-    {# <label for="slot"> Select Slot:</label>
-    <select name="slot_id" id="slot">
-        {% for slot in slots %}
-        <option value="{{ slot.id }}">{{ slot.start_time}} </option>
-        {% endfor %}
-    </select> #}
 
 
-
-
-    <input class="book_button" type="submit" value="Book"/>
+    <input class="book_button" type="submit" value="Confirm type"/>
 </form>
 
 
 
 
 
-
+    {# <label for="member">Select Member:</label>
+    <select name="members" id="members" multiple>
+    {% for member in members %}
+        <option value="{{ member.id }}">{{member.name}}</option>
+        
+    {% endfor %} 
+    </select> #}
 
 
 {% endblock %}

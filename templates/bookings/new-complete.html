@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+<h3>Select Members For {{type}}, Court No:{{court.court_no}} {{ court.surface }} </h3>
+</head>
+<form action="/bookings" method="post">
+    <input hidden value="{{court.id}}" name="court" />
+    {% if type == 'singles' %}
+    <label for="member">Select Member:</label>
+    <select name="member-1" id="member-1">
+    {% for member in members %}
+        <option value="{{ member.id }}">{{member.name}}</option>
+        
+    {% endfor %} 
+    </select>
+    <label for="member">Select Member:</label>
+    <select name="member-2" id="member-2">
+    {% for member in members %}
+        <option value="{{ member.id }}">{{member.name}}</option>
+        
+    {% endfor %} 
+    </select> 
+    {% endif %}
+    {% if type == 'doubles' %}
+            <label for="member">Select Member:</label>
+    <select name="member-1" id="member-1">
+    {% for member in members %}
+        <option value="{{ member.id }}">{{member.name}}</option>
+        
+    {% endfor %} 
+    </select>
+    <label for="member">Select Member:</label>
+    <select name="member-2" id="member-2">
+    {% for member in members %}
+        <option value="{{ member.id }}">{{member.name}}</option>
+        
+    {% endfor %} 
+    </select>
+    <label for="member">Select Member:</label>
+    <select name="member-3" id="member-3">
+    {% for member in members %}
+        <option value="{{ member.id }}">{{member.name}}</option>
+        
+    {% endfor %} 
+    </select>
+    <label for="member">Select Member:</label>
+    <select name="member-4" id="member-4">
+    {% for member in members %}
+        <option value="{{ member.id }}">{{member.name}}</option>
+        
+    {% endfor %} 
+    </select>
+    {% endif %}
+
+
+
+    <input class="book_button" type="submit" value="Book"/>
+</form>
+
+
+
+
+
+    {# <label for="member">Select Member:</label>
+    <select name="members" id="members" multiple>
+    {% for member in members %}
+        <option value="{{ member.id }}">{{member.name}}</option>
+        
+    {% endfor %} 
+    </select> #}
+
+
+{% endblock %}
