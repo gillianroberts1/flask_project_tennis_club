@@ -23,7 +23,6 @@ def show_member(id):
     courts = court_repository.court_for_member(member)
     return render_template("members/show.html", member=member, courts=courts)
 
-
 # route to add new member GET
 @members_blueprint.route("/members/new")
 def new_user():

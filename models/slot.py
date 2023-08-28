@@ -3,6 +3,5 @@ class Slot:
         self.court = court
         self.start_time = start_time
         self.end_time = end_time
-        
         self.available = available
         self.id = id

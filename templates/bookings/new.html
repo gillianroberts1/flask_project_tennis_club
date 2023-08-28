@@ -7,20 +7,39 @@
 </head>
 <form action="/bookings" method="post">
     <label for="member">Select Member:</label>
-    <select name="member_id" id="member">
-        {% for member in members %}
+    <select name="member_id[]" id="member" multiple>
+    {% for member in members %}
         <option value="{{ member.id }}">{{member.name}}</option>
-        {% endfor %}
+        
+    {% endfor %} 
     </select>
 
     <label for="court">Select Court:</label>
     <select name="court_id" id="court_no">
         {% for court in courts %}
         <option value="{{ court.id }}">{{court.court_no}} {{ court.surface }}</option>
+         
         {% endfor %}
     </select>
 
+    {# <label for="slot"> Select Slot:</label>
+    <select name="slot_id" id="slot">
+        {% for slot in slots %}
+        <option value="{{ slot.id }}">{{ slot.start_time}} </option>
+        {% endfor %}
+    </select> #}
+
+
+
+
     <input class="book_button" type="submit" value="Book"/>
 </form>
+
+
+
+
+
+
+
 
 {% endblock %}

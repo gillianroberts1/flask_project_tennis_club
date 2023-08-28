@@ -17,12 +17,13 @@
 <ul>
     {% for booking in bookings %}
     <li>
-    <p> Court No: {{booking.court.court_no}} - Member Name: {{ booking.member.name}}</p>
-        <p>
+        <p>  Court No: {{ booking.court.court_no }} Member: {{booking.member.name}} </p>
+         <p>
             <form action="bookings/{{ booking.id }}/delete" method="post">
                 <input class="delete_btn" type="submit" value="delete" />
             </form>
         </p>
+        
     </li>
     {% endfor %}
  </ul>
