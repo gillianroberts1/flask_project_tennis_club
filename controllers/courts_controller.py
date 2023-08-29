@@ -9,8 +9,9 @@ courts_blueprint = Blueprint("courts", __name__)
 
 @courts_blueprint.route("/courts")
 def courts_list():
-    courts = court_repository.select_all()
-    return render_template("courts/index.html", courts=courts)
+    booked_courts = court_repository.courts_with_bookings()
+    unbooked_courts = court_repository.courts_with_no_bookings()
+    return render_template("courts/index.html", booked_courts=booked_courts, unbooked_courts=unbooked_courts)
 
 @courts_blueprint.route("/courts/<id>")
 def show_court(id):

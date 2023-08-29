@@ -1,0 +1,49 @@
+.btn-container {
+    display: grid;
+    width:500px;
+    grid-template-columns: 200px 200px;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 100px;
+    grid-row-gap: 114px;
+    grid-column-gap:200px;
+}
+
+.btn-container :first-child {
+    align-self: center;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    background-color: rgb(181,202,70);
+    border: 1px black;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 0px 18px 5px #98ac31;
+    font-size: 20px;
+    
+}
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #98ac31;
+
+}
+
+.logo {
+    float:right;
+    margin-top:20px;
+
+}
+
+footer {
+
+    position: absolute;
+    bot
+}

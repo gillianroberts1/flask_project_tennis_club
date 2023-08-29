@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css' )}}">
-        
-        <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css' )}}">
 
-        <title> David Deployed Tennis Club</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/members">Members</a></li>
-                    <li><a href="/courts">Courts</a></li>
-                    <li><a href="/bookings">Bookings</a></li>
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
 
-                </ul>
-            </nav>
+    <title> Servivors Tennis Club</title>
 
-        
-        
-        </header>
+</head>
+
+<header>
+        <nav>
+            <ul class="nav_links">
+
+                <button><a href="/">Home</a></button>
+                <button><a href="/members">Members</a></button>
+                <button><a href="/courts">Courts</a></button>
+                <button><a href="/bookings">Bookings</a></button>
+
+            </ul>
+        </nav>
+
+</header>
+
+
+
         <hr>
-        
-                
-                
-            
-<main>
-        {% block content %} {% endblock %}    
-  
-</main>
-    <footer>
-    <hr>
-        <h3>Design by - CodeCarmenCita &copy; 2023</h3>
-    </footer>
-    </body>
 
-    
-    
+
+
+        {# <section id="main-content"> #}
+            {% block content %}
+
+            {% endblock %}
+
+        {# </section> #}
+    {# </main>
+</body> #}
+
+<hr>
+<footer>
+<h3>Design by - CodeCarmenCita &copy; 2023</h3>
+</footer>
+
+
+
+
+
 </html>

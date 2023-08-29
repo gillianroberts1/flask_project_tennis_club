@@ -2,21 +2,40 @@
 
 {% block content %}
 
+<div class="btn-wrapper">
+    <a href="/courts/new">New Court</a>
+</div>
 
-<a href="/courts/new">New Court</a>
-<h1> All Courts </h1>
-
-{% for court in courts %} 
-
-<div class="court">
-<div class="court-container">
-
-
-
+<h1>All Courts </h1>
 <hr>
 
-<p><a href="/courts/{{ court.id }}"> {{ court.court_no }} </a></p>
-<p>Court Surface: {{ court.surface }} </p>
-{% endfor %}
+<div class="court-container">
+    {% for court in booked_courts %}
+
+    <div style="background: url(/static/images/{{court.surface}}.jpg);">
+    <div class="court">
+        <p><a href="/courts/{{ court.id }}"> Court No: {{ court.court_no }} </a></p>
+        <p>Surface: {{ court.surface }} </p>
+        <p>Booked</p>
+        {# <img src="/static/images/{{court.surface}}.jpg" /> #}
+
+    </div>
+    </div>
+    {% endfor %}
+
+
+    {% for court in unbooked_courts %}
+    <div style="background-image: url(/static/images/{{court.surface}}.jpg);">
+        <div class="court">
+            <p><a href="/courts/{{ court.id }}"> Court No: {{ court.court_no }} </a></p>
+            <p>Surface: {{ court.surface }} </p>
+            <p>Available</p>
+            {# <img src="/static/images/{{court.surface}}.jpg" /> #}
+            <a href="/bookings/new">Book court</a>
+        </div>
+    </div>
+    {% endfor %}
 </div>
+
+
 {% endblock %}

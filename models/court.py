@@ -4,4 +4,8 @@ class Court:
         self.court_no = court_no
         self.surface = surface
         self.capacity = 4
+        self.available = True
         self.id = id
+
+    
+        
