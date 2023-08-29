@@ -2,27 +2,31 @@
 
 {% block content %}
 
+<div class="member-wrapper">
+    <div class="single-member">
+        <p>ID:{{member.id}}</p>
 
-<div class="member-container">
-<p>ID:{{member.id}}</p>
+        <h3> Member Name: {{member.name}}</h3>
 
-<h3> Member Name: {{member.name}}</h3>
+        <p>Address: {{member.address}}</p>
+        <p>Contact Tel No: {{member.tel_no}}</p>
+        <p>Email Address: {{member.email}}</p>
 
-<p>Address: {{member.address}}</p>
-<p>Contact Tel No: {{member.tel_no}}</p>
-<p>Email Address: {{member.email}}</p>
 
-<div class="edit_btn">
-<a href="/members/{{member.id}}/edit">Edit</a>
+        <a class="btn edit-btn" href="/members/{{member.id}}/edit">Edit</a>
+
+        <hr>
+        <p>Premium: {{member.premium}}</p>
+        <p>Wins: {{member.wins}}</p>
+        <p>Loses: {{member.loss}}</p>
+    </div>
+
+    <div class="courts-booked">
+        <h3>Courts Booked</h3>
+        {% for court in courts %}
+        <p> Court No: {{ court.court_no }}</p>
+        {% endfor %}
+    </div>
 </div>
 
-<hr>
-<p>Premium: {{member.premium}}</p>
-<p>Wins: {{member.wins}}</p>
-<p>Loses: {{member.loss}}</p>
-</div>
-
-{% for court in courts %}
-<p> Court Booked: {{ court.court_no }}</p>
-{% endfor %}
 {% endblock %}

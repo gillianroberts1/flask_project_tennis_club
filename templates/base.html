@@ -6,45 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css' )}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/buttons.css' )}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/forms.css' )}}">
+
 
     <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Tektur:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Tektur:wght@500&display=swap"
+        rel="stylesheet">
     <title> Servivors Tennis Club</title>
 
 </head>
 
 <header>
-        <nav>
-            <ul class="nav_links">
+    <img class="logo" src="../static/images/logo.png" alt="logo">
+    <nav>
+        <ul class="nav_links">
 
-                <button><a href="/">Home</a></button>
-                <button><a href="/members">Members</a></button>
-                <button><a href="/courts">Courts</a></button>
-                <button><a href="/bookings">Bookings</a></button>
+            <li><a href="/">Home</a></li>
+            <li><a href="/members">Members</a></li>
+            <li><a href="/courts">Courts</a></li>
+            <li><a href="/bookings">Bookings</a></li>
 
-            </ul>
-        </nav>
+        </ul>
+    </nav>
 
 </header>
 
 
 
-        <hr>
 
 
+<main>
 
-        {# <section id="main-content"> #}
-            {% block content %}
+    {# <section id="main-content"> #}
 
-            {% endblock %}
+        {% block content %}
 
-        {# </section> #}
-    {# </main>
+        {% endblock %}
+
+</main>Ï
+
+{# </section> #}
+{# </main>
 </body> #}
 
-<hr>
+
 <footer>
-<h3>Design by - CodeCarmenCita &copy; 2023</h3>
+    <h3>Design by - CodeCarmenCita &copy; 2023</h3>
 </footer>
 
 

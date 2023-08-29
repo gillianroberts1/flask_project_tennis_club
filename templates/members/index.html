@@ -2,25 +2,25 @@
 
 {% block content %}
 
-<div class="btn-wrapper">
-<a href="/members/new">New Member</a>
-</div>
+    <a class="btn" href="/members/new">New Member</a>
+
 
 <h1> All Members </h1>
 
-{% for member in members %} 
+{% for member in members %}
 
 <div class="member">
-<div class="member-container">
+    <div class="member-container">
 
-<hr>
-    <p><a href="/members/{{ member.id }}"> {{ member.name }}</a></p>
-    <p> Address: {{member.address}} Postcode: {{ member.postcode }} </p>
-    <p> Tel No: {{member.tel_no}} Email: {{member.email}} Date of Birth: {{member.dob}}</p>
-    <p> Premium Member: {{member.premium}} Win: {{ member.win }} Loss: {{ member.loss}}</p>
-
-{% endfor %}
-</div>
+        <hr>
+        <div class="members">
+            <p><a href="/members/{{ member.id }}"> {{ member.name }}</a></p>
+            <p> Address: {{member.address}} Postcode: {{ member.postcode }} </p>
+            <p> Tel No: {{member.tel_no}} Email: {{member.email}} Date of Birth: {{member.dob}}</p>
+            <p> Premium Member: {{member.premium}} Win: {{ member.win }} Loss: {{ member.loss}}</p>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

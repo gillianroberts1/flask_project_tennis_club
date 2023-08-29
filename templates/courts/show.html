@@ -2,18 +2,23 @@
 
 {% block content %}
 
-<div class="court_container">
-<p>ID: {{court.id }}</p>
-<p> Court No: {{ court.court_no }} Court Surface: {{ court.surface }}</p>
+
+
+<div class="member-wrapper">
+    <div class="single-member"> ID: {{court.id }}
+        <p> Court No: {{ court.court_no }} Court Surface: {{ court.surface }}</p>
+        <div class="edit-btn">
+            <a href="/courts/{{court.id}}/edit">Edit</a>
+        </div>
+
+    </div>
+
+
+
+    <div class="courts-booked">
+        {% for member in members %}
+        <p> Currently Booked By: {{ member.name }}</p>
+        {% endfor %}
+    </div>
 </div>
-
-<div class="edit_btn">
-<a href="/courts/{{court.id}}/edit">Edit</a></p>
-</div>
-
-<hr>
-{% for member in members %}
-<p> Currently Booked By: {{ member.name }}</p>
-{% endfor %}
-
 {% endblock %}

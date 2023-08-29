@@ -2,39 +2,42 @@
 
 {% block content %}
 
-<div class="btn-wrapper">
-    <a href="/courts/new">New Court</a>
-</div>
+<a class="btn" href="/courts/new">New Court</a>
 
 <h1>All Courts </h1>
 <hr>
 
 <div class="court-container">
     {% for court in booked_courts %}
+    <div class="court-booked">
 
-    <div style="background: url(/static/images/{{court.surface}}.jpg);">
-    <div class="court">
-        <p><a href="/courts/{{ court.id }}"> Court No: {{ court.court_no }} </a></p>
-        <p>Surface: {{ court.surface }} </p>
-        <p>Booked</p>
-        {# <img src="/static/images/{{court.surface}}.jpg" /> #}
-
-    </div>
-    </div>
-    {% endfor %}
-
-
-    {% for court in unbooked_courts %}
-    <div style="background-image: url(/static/images/{{court.surface}}.jpg);">
-        <div class="court">
-            <p><a href="/courts/{{ court.id }}"> Court No: {{ court.court_no }} </a></p>
-            <p>Surface: {{ court.surface }} </p>
-            <p>Available</p>
-            {# <img src="/static/images/{{court.surface}}.jpg" /> #}
-            <a href="/bookings/new">Book court</a>
+        <div style="background: url(/static/images/{{court.surface}}.jpg);">
+            <div class="court">
+                <p><a href="/courts/{{ court.id }}"> Court No: {{ court.court_no }} </a></p>
+                <p>Surface: {{ court.surface }} </p>
+                <p>Booked</p>
+                {# <img src="/static/images/{{court.surface}}.jpg" /> #}
+            </div>
         </div>
     </div>
     {% endfor %}
+
+
+
+    {% for court in unbooked_courts %}
+    <div class="court-unbooked">
+        <div style="background-image: url(/static/images/{{court.surface}}.jpg);">
+            <div class="court">
+                <p><a href="/courts/{{ court.id }}"> Court No: {{ court.court_no }} </a></p>
+                <p>Surface: {{ court.surface }} </p>
+                <p>Available</p>
+                {# <img src="/static/images/{{court.surface}}.jpg" /> #}
+                <a class='small-btn' href="/bookings/new">Book court</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
 </div>
 
 

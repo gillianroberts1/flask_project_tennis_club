@@ -1,0 +1,53 @@
+.btn  {
+    background-color: #033063;
+    color: #98ac31;
+    border-radius: 50px;
+    padding: 20px 50px;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: all 500ms ease;
+
+}
+.btn:hover  {
+
+    background-color: #054894;
+    transform: scale(1.5);
+}
+
+.btn a:hover  {
+
+    background-color: #054894;
+    transform: scale(1.5);
+}
+
+
+.edit-btn {
+    
+    margin-left: 0;
+    width: fit-content;
+}
+
+.edit-btn {
+    background-color: #033063;
+    color: #98ac31;
+    border-radius: 50px;
+    padding: 20px 50px;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: all 500ms ease;
+
+}
+
+.small-btn {
+    background-color: #033063;
+    color: #98ac31;
+    border-radius: 50px;
+    padding: 20px 50px;
+    margin-left: 20px;
+    font-size: 5px;
+    transition: all 500ms ease;
+    width: 20px;
+    
+
+}
+

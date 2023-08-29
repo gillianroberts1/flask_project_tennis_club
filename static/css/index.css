@@ -24,26 +24,47 @@ button {
     cursor:pointer;
     transition: all 0.3s ease 0s;
     box-shadow: 0px 0px 18px 5px #98ac31;
-    font-size: 20px;
+    transition: all 500ms ease;
+
     
 }
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size:16px;
+    color: #033063;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 20px;
+
+
+}
+
 a {
     text-decoration: none;
+    font: mo;
 }
 
 button:hover {
     background-color: #98ac31;
+    transform: scale(1.5);
+
 
 }
 
 .logo {
     float:right;
     margin-top:20px;
+    
 
 }
 
 footer {
 
     position: absolute;
-    bot
+    bottom: 5px;
+    color:white;
+    margin-left: 100px;
+    font-size: 20px;
+    
 }

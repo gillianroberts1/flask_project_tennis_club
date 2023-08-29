@@ -2,18 +2,16 @@
 
 {% block content %}
 
-<p class="btn-wrapper">
-    <a class="btn_action" href="/bookings/new">New Booking</a>
-</p>
-<head>
-<h3>Bookings</h3>
-</head>
+    <a class="btn" href="/bookings/new">New Booking</a>
+
+<h1>Bookings</h1>
 
 
 
 
 
-<p class="booking-container"></p>
+
+<div class="courts-booked">
 
 
     {% for booking in bookings %}
@@ -21,13 +19,13 @@
         <p>  Court No: {{ booking.court.court_no }} Member: {{booking.member.name}} </p>
          <p>
             <form action="bookings/{{ booking.id }}/delete" method="post">
-                <input class="delete_btn" type="submit" value="delete" />
+                <input class="btn" type="submit" value="delete" />
             </form>
         </p>
         
     
     <hr>
     {% endfor %}
-
+</div>
 
  {% endblock %}
