@@ -15,9 +15,14 @@
         <hr>
         <div class="members">
             <p><a href="/members/{{ member.id }}"> {{ member.name }}</a></p>
-            <p> Address: {{member.address}} Postcode: {{ member.postcode }} </p>
-            <p> Tel No: {{member.tel_no}} Email: {{member.email}} Date of Birth: {{member.dob}}</p>
-            <p> Premium Member: {{member.premium}} Win: {{ member.win }} Loss: {{ member.loss}}</p>
+            <p>Address: {{member.address}} Postcode: {{ member.postcode }} </p>
+           <hr>
+            <p>Tel No: {{member.tel_no}} </p>
+            <p>Email: {{member.email}} </p>
+            <p>Date of Birth: {{member.dob}}</p>
+            <hr>
+            <p> Premium Member: {{member.premium}} </p>
+            <p>Win: {{ member.win }} Loss: {{ member.loss}}</p>
         </div>
         {% endfor %}
     </div>
