@@ -63,7 +63,7 @@ def court_for_member(member):
 
 
 
-# the following finctions are to list courts shwwing booked or available
+# the following functions are to list courts showing booked or available
 def courts_with_bookings():
     courts = []
     sql = "SELECT DISTINCT courts.* FROM courts INNER JOIN bookings ON courts.id = bookings.court_id;"  # DISTINCT used here to only bring back unique values (creating booking add the court to the table 2 or 4 times depending on single or double booking)
