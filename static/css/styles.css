@@ -2,12 +2,13 @@
 
  
 * {
-    /* box-sizing: border-box;
-    margin: 0;
-    padding: 0px;
-    background-color: white ;  */
+    
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+
 
 } 
 
@@ -175,7 +176,8 @@ h1 {
 .court {
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.25);
+    padding-bottom: 139px;
 
 
 
@@ -184,11 +186,13 @@ h1 {
 
 .court-container {
     display: grid;
-    grid-template-columns:120px 120px;
+    grid-template-columns:100px 100px 100px;
     align-items: start;
     justify-content: space-evenly;
     grid-row-gap:20px;
-    grid-column-gap:20px;
+    grid-column-gap:400px;
+    margin-right: 600px;
+    
 
 
 
