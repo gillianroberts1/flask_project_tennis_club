@@ -5,6 +5,7 @@
 <head>
 <h3>Select Members For {{type}}, Court No:{{court.court_no}} {{ court.surface }} </h3>
 </head>
+<div class="booking-form">
 <form action="/bookings" method="post">
     <input hidden value="{{court.id}}" name="court" />
     {% if type == 'singles' %}
@@ -59,7 +60,7 @@
     <input class="btn" type="submit" value="Book"/>
 </form>
 
-
+</div>
 
 
 

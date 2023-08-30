@@ -1,5 +1,5 @@
 .form_layout {
-    display: grid;
+        display: grid;
         justify-content: center;
         width: 700px;
         background-color:white;
@@ -14,7 +14,11 @@
     form {
         padding-top: 20px;
         font-size: 20px;
+        display: grid;
+
     }
+
+
     
     
     .form_element {
@@ -31,5 +35,27 @@
     input {
         font-size: 20px;
         padding: 5px;
+    }
+
+    .booking-form {
+        display: grid;
+        justify-content: center;
+        width: 900px;
+        background-color:white;
+        padding: 50px;
+        margin: 50px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 11px 2px #98ac31;
+        font-size: 18px;
+    
+
+    }
+
+    label {
+        padding-top:20px;
+    }
+
+    select {
+        margin-bottom: 20px;
     }
     

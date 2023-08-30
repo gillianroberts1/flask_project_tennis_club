@@ -3,13 +3,14 @@
 
 
 <head>
-    <h3>Edit Court</h3>
+    <h1>Edit Court</h1>
 </head>
 
-<p>Court No: {{court.court_no }} Court Surface: {{court.surface }}</p>
 <form class="form_layout" action="/courts/{{ court.id }}" method="post">
-
+    <p>Court No: {{court.court_no }} Court Surface: {{court.surface }}</p>
+<hr>
     <div class="form_element">
+
         <label for="court_no">Court No:</label>
         <input type="text" name="court_no" value="{{court.court_no}}" />
     </div>

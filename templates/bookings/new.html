@@ -3,8 +3,9 @@
 {% block content %}
 
 <head>
-<h3>New Booking</h3>
+<h1>New Booking</h1>
 </head>
+<div class="booking-form">
 <form action="/bookings/type" method="post">
     <label for="type">Select Booking Type:</label>
     <select name="type" id="type">
@@ -25,6 +26,7 @@
 
     <input class="btn" type="submit" value="Confirm type"/>
 </form>
+</div>
 
 
 
