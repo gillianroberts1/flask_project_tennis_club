@@ -6,7 +6,7 @@ I have been asked by a new local tennis club to design a booking system to keep 
 #### MVP
 
 * The app should allow the user to create and edit courts
-* It shoudl allow the user to create and edit members
+* It should allow the user to create and edit members
 * it should allow the user to book members onto courts
 * it should allow the user to view all bookings, by member, by court and view all.
 
@@ -31,7 +31,7 @@ I have been asked by a new local tennis club to design a booking system to keep 
 ## Requires - Flask, Python3, PostgreSQL to run.
 
 1. In the terminal, create db tennis_club on psql
-2. in the terminal, psql -d tennis_club -f db/tennis_club.psql
+2. in the terminal, psql -d tennis_club -f db/tennis_club.sql
 3. In the terminal, psql -d tennis_club to connect to db   (quit to exit)
 3. In new terminal - python3 console.py   (ctrl+ d to exit)
 4. in new terminal - flask run - open link to port 4999  (ctrl +c to exit)
@@ -48,7 +48,7 @@ However, DISTINCT sql in the court repository allowed me prevent the court from 
 
 2. Booking more than one member onto a court and limiting no of members per court depending on whether is was a singles or doubles or game - i handled this initially in html, creating a form with a conditional statement, meaning that if singles was selected then it would present a placeholder to select 2 members. If doubles was selected then 4 members could be selected. I then had to manage the rendering of this in the controller as it didnt know how to deal with it otherwise. I added further python logic to this as a work aorund along side the html.
 
-3. CSS - although an after thought, i have learned that i need to set up my html better with a more thought through approach to style things such as buttons, forms etc in more consistent way avoiding repeat code.
+3. CSS - although an after thought, i have learned that i need to set up my html better with more thought through approach to style things such as buttons, forms etc in more consistent way avoiding repeat code.
 
 
 
@@ -75,7 +75,7 @@ However, DISTINCT sql in the court repository allowed me prevent the court from 
 18. I wanted to show an option to book singles or doubles. I had to create an additional html page to do this and then move onto the next page to select members for singles or doubles.
 19. CSS - i covered the home page first of all as i wanted the nav options to be part of the body. I found an image that i wanted to use the background. This then allowed me to decide on colour palette and also gave me an idea for the nav links to llok like tennis balls and to zoom when hovered over. 
 20. I sampled the colours from image using colour picker extension on dev tools, and created a logo using this palette. As the home page was dark, i learned how to remove the background colour, whilst keeping the theme.
-21. I found images for court surfaces and set the app up so that when a new court was added, it woudl automatically select the correct image.
+21. I found images for court surfaces and set the app up so that when a new court was added, it would automatically select the correct image.
 
 
 
